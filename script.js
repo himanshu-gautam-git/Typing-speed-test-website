@@ -14,7 +14,10 @@ const typedwords = document.getElementById('myWords');
 const btn = document.getElementById('btn');  
 let startTime, endTime;
 
+typedwords.disabled = true;
+
 const startType = () =>{
+    typedwords.value = '';
     let randomNumber = Math.floor(Math.random()*setOfWords.length);
     msg.innerText=setOfWords[randomNumber];
     let date = new Date();
